@@ -74,8 +74,8 @@ contract FancyLoogie is ERC721Enumerable, IERC721Receiver, Ownable {
 
   function tokenURI(uint256 id) public view override returns (string memory) {
       require(_exists(id), "not exist");
-      string memory name = string(abi.encodePacked('FancyLoogie #',id.toString()));
-      string memory description = string(abi.encodePacked('FancyLoogie'));
+      string memory name = string(abi.encodePacked('SixPath #',id.toString()));
+      string memory description = string(abi.encodePacked('SixPath'));
       string memory image = Base64.encode(bytes(_generateSVGofTokenById(id)));
 
       return string(abi.encodePacked(
@@ -111,8 +111,7 @@ contract FancyLoogie is ERC721Enumerable, IERC721Receiver, Ownable {
 
     return svg;
   }
-
-  // Visibility is `public` to enable it being called by other contracts for composition.
+  
   function renderTokenById(uint256 id) public view returns (string memory) {
     string memory render;
 
@@ -126,8 +125,7 @@ contract FancyLoogie is ERC721Enumerable, IERC721Receiver, Ownable {
 
     return render;
   }
-
-  // https://github.com/GNSPS/solidity-bytes-utils/blob/master/contracts/BytesLib.sol#L374
+  
   function _toUint256(bytes memory _bytes) internal pure returns (uint256) {
         require(_bytes.length >= 32, "toUint256_outOfBounds");
         uint256 tempUint;
@@ -140,15 +138,15 @@ contract FancyLoogie is ERC721Enumerable, IERC721Receiver, Ownable {
   }
 
   function removeNftFromLoogie(address nft, uint256 id) external {
-    require(msg.sender == ownerOf(id), "only the owner can undress a loogie!!");
-    require(this.hasNft(nft, id), "the loogie is not wearing this NFT");
+    require(msg.sender == ownerOf(id), "only the owner can undress !!");
+    require(this.hasNft(nft, id), "is not wearing this NFT");
 
     NFTContract nftContract = NFTContract(nft);
     _removeNftFromLoogie(nftContract, id);
   }
 
   function downgradeLoogie(uint256 id) external {
-    require(msg.sender == ownerOf(id), "only the owner can downgrade a loogie!!");
+    require(msg.sender == ownerOf(id), "only the owner can downgrade!!");
 
     // remove nft tokens from FancyLoogie
     for (uint i=0; i<nftContracts.length; i++) {
@@ -172,13 +170,13 @@ contract FancyLoogie is ERC721Enumerable, IERC721Receiver, Ownable {
   }
 
   function hasNft(address nft, uint256 id) external view returns (bool) {
-    require(nftContractsAvailables[nft], "the loogies can't wear this NFT");
+    require(nftContractsAvailables[nft], "can't wear this NFT");
 
     return (nftById[nft][id] != 0);
   }
 
   function nftId(address nft, uint256 id) external view returns (uint256) {
-    require(nftContractsAvailables[nft], "the loogies can't wear this NFT");
+    require(nftContractsAvailables[nft], "an't wear this NFT");
 
     return nftById[nft][id];
   }
@@ -193,8 +191,8 @@ contract FancyLoogie is ERC721Enumerable, IERC721Receiver, Ownable {
       uint256 fancyId = _toUint256(fancyIdData);
 
       require(ownerOf(fancyId) == from, "you can only add stuff to a fancy loogie you own.");
-      require(nftContractsAvailables[msg.sender], "the loogies can't wear this NFT");
-      require(nftById[msg.sender][fancyId] == 0, "the loogie already has this NFT!");
+      require(nftContractsAvailables[msg.sender], "can't wear this NFT");
+      require(nftById[msg.sender][fancyId] == 0, "already has this NFT!");
 
       nftById[msg.sender][fancyId] = tokenId;
 

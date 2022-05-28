@@ -86,16 +86,7 @@ function YourFancyLoogies({
 
   return (
     <>
-      <div style={{ maxWidth: 820, margin: "auto", marginTop: 32, paddingBottom: 32 }}>
-        <div style={{ fontSize: 16 }}>
-          <p>
-            Select the <strong>TruthSeeker</strong> you want to wear with artefacts.
-          </p>
-          <p>
-            Mint some <strong>artefacts</strong> and then you can <strong>add</strong> them to your TruthSeeker.
-          </p>
-        </div>
-      </div>
+      
 
       <div className="your-fancy-loogies" style={{ width: 515, margin: "0 auto", paddingBottom: 256 }}>
         <List
@@ -117,17 +108,17 @@ function YourFancyLoogies({
                           onClick={() => {
                             setSelectedFancyLoogie(id);
                             setSelectedNfts({});
-                            history.push("/yourAccesories");
+                            history.push("/");
                           }}
                         >
-                          Select to wear
+                          Select to Home
                         </Button>
                       ) : (
                         <Button className="action-inline-button" disabled>
                           Selected
                         </Button>
                       )}
-                      <Dropdown overlay={
+                      {/* <Dropdown overlay={
                         <Menu>
                           <Menu.Item key="downgrade">
                             <Button
@@ -171,7 +162,7 @@ function YourFancyLoogies({
                         <Button>
                           Actions <DownOutlined />
                         </Button>
-                      </Dropdown>
+                      </Dropdown> */}
                     </div>
                   }
                 >

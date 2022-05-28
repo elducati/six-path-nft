@@ -44,6 +44,13 @@ function mnemonic() {
 }
 
 module.exports = {
+  contractSizer: {
+    alphaSort: true,
+    disambiguatePaths: false,
+    runOnCompile: true,
+    strict: true,
+    only: [":ERC20$"],
+  },
   defaultNetwork,
 
   /**
@@ -293,7 +300,7 @@ module.exports = {
         settings: {
           optimizer: {
             enabled: true,
-            runs: 200,
+            runs: 1,
             details: {
               yul: false,
             },
@@ -323,6 +330,7 @@ module.exports = {
     apiKey: "DNXJA8RX2Q3VZ4URQIWP7Z68CJXQZSC6AW",
   },
 };
+
 
 const DEBUG = false;
 

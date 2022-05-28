@@ -83,14 +83,10 @@ function YourLoogies({
       <div style={{ maxWidth: 820, margin: "auto", marginTop: 32, paddingBottom: 32 }}>
         <div style={{ fontSize: 16 }}>
           <p>
-            Only <strong>3728 TruthSeekers</strong> available on a price curve <strong>increasing 0.2%</strong> with
+            Only <strong>3728 SixPaths</strong> available on a price curve <strong>increasing 0.2%</strong> with
             each new mint.
           </p>
           <p>All Ether from sales goes to public goods!!</p>
-          <p>
-            You can upgrade your <strong>TruthSeeker</strong>, mint some artefacts and add the artefacts to your{" "}
-            <strong>TruthSeeker</strong>.
-          </p>
         </div>
       </div>
 
@@ -141,7 +137,7 @@ function YourLoogies({
                             );
                           }}
                         >
-                          Approve upgrade
+                          Approve
                         </Button>
                       ) : (
                         <Button
@@ -152,7 +148,7 @@ function YourLoogies({
                             });
                           }}
                         >
-                          Upgrade TruthSeeker
+                          Upgrade to Home Page
                         </Button>
                       )}
                     </div>

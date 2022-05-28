@@ -220,7 +220,7 @@ function App(props) {
 
   const faucetAvailable = localProvider && localProvider.connection && targetNetwork.name.indexOf("local") !== -1;
 
-  const nfts = ["Orb", "TruthSphere", "SixPath", "TheLeftEye"];
+  const nfts = ["Orb", "TruthSphere", "SixPath"];
 
   const nftsSvg = {
     Orb: (
@@ -273,11 +273,6 @@ function App(props) {
         </g>
       </g>
     ),
-    TheLeftEye: (
-      <g class="contact-lenses" transform="translate(-1,0) scale(0.1 0.1)">
-        <path fill="#1890ff" d="M440.81 217.398c-.8-3.695-14.718-38.064-48.19-72.026-31.087-31.54-86.17-69.137-172.044-69.137-85.877 0-140.96 37.599-172.047 69.14-17.557 17.814-29.449 35.627-36.332 47.435-3.157 5.416-5.969 10.749-8.355 15.849C.574 215.638 0 217.42 0 220.575c0 3.155.574 4.936 3.841 11.916 2.387 5.1 5.198 10.434 8.355 15.85 6.883 11.807 18.775 29.621 36.332 47.435 31.087 31.541 86.17 69.14 172.047 69.14s140.96-37.599 172.047-69.14c17.557-17.813 29.448-35.627 36.332-47.435 3.156-5.416 5.969-10.75 8.355-15.85 3.266-6.979 3.841-8.761 3.841-11.916 0-1.069-.114-2.134-.34-3.177zm-220.235 82.109c-43.594 0-78.934-35.34-78.934-78.934s35.34-78.934 78.934-78.934 78.934 35.34 78.934 78.934-35.34 78.934-78.934 78.934z" />
-      </g>
-    ),
   };
 
   const [fancyLoogieContracts, setFancyLoogieContracts] = useState([]);
@@ -323,14 +318,12 @@ function App(props) {
           <Link to="/">Home</Link>
         </Menu.Item>
         <Menu.Item key="/yourLoogies">
-          <Link to="/yourLoogies">Mint Your TruthSeeker</Link>
+          <Link to="/yourLoogies">Mint Your SixPath</Link>
         </Menu.Item>
         <Menu.Item key="/yourFancyLoogies">
-          <Link to="/yourFancyLoogies">Your TruthSeeker</Link>
+          <Link to="/yourFancyLoogies">Your SixPath</Link>
         </Menu.Item>
-        <Menu.Item key="/yourAccesories">
-          <Link to="/yourAccesories">Your Artefacts</Link>
-        </Menu.Item>
+
         <Menu.Item key="/howto">
           <Link to="/howto">How To Use Optimistic Network</Link>
         </Menu.Item>

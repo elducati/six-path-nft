@@ -35,8 +35,6 @@ function YourAccesories({
       "<p>Only <strong>1000 TruthSpheres</strong> available on a price curve <strong>increasing 0.2%</strong> with each new mint.</p><p>The TruthSpheres have a <strong>random color</strong>!</p>",
     SixPath:
       "<p>Only <strong>1000 SixPaths</strong> available on a price curve <strong>increasing 0.2%</strong> with each new mint.</p><p>Each SixPath has a <strong>random color</strong>.</p>",
-    TheLeftEye:
-      "<p>Only <strong>1000 Left Eyes</strong> available on a price curve <strong>increasing 0.2%</strong> with each new mint.</p><p>The LeftEye has a <strong>random color</strong>!</p>",
   };
 
   const priceToMint = useContractReader(readContracts, nft, "price");

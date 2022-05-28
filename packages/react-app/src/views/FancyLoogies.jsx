@@ -50,7 +50,7 @@ function FancyLoogies({ readContracts, mainnetProvider, blockExplorer, DEBUG }) 
       <div style={{ maxWidth: 820, margin: "auto", marginTop: 32, paddingBottom: 32 }}>
         <div style={{ fontSize: 16 }}>
           <p>
-            Upgrade <Link to="/yourLoogies">Your TruthSeeker</Link>!
+            Mint <Link to="/yourLoogies">Your SixPath</Link>!
           </p>
         </div>
       </div>
@@ -93,7 +93,7 @@ function FancyLoogies({ readContracts, mainnetProvider, blockExplorer, DEBUG }) 
                         </div>
                       }
                     >
-                      <img src={item.image} alt={"TruthSeeker #" + id} width="300" />
+                      <img src={item.image} alt={"SixPath #" + id} width="300" />
                       <div>{item.description}</div>
                       <div>
                         <Address
