@@ -2,7 +2,8 @@
 
 ![www fancyloogies com_fancy-loogie svg](https://user-images.githubusercontent.com/466652/148587212-d6b113b0-2ca1-448a-b6d4-2ecea0a99ad6.png)
 
-> Demonstration showing how SVG NFTs can be composed on top of each other.
+> Demonstration showing how SVG NFTs can be composed on top of each other. 
+> Borrowed concept from:
 
 https://www.fancyloogies.com/
 
