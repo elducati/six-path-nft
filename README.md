@@ -1,6 +1,6 @@
 # 🏗 scaffold-eth - SixPath - SVG NFT
 
-![six path symbol svg nft](https://github.com/elducati/six-path-nft/blob/master/packages/react-app/public/sixpath.svg)
+![six path symbol svg nft](https://raw.githubusercontent.com/elducati/six-path-nft/master/packages/react-app/public/sixpath.svg)
 
 > Demonstration showing how SVG NFTs can be composed on top of each other. 
 > Borrowed concept from:
