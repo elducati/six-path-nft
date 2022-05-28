@@ -1,6 +1,6 @@
 # 🏗 scaffold-eth - SixPath - SVG NFT
 
-![www fancyloogies com_fancy-loogie svg](https://user-images.githubusercontent.com/466652/148587212-d6b113b0-2ca1-448a-b6d4-2ecea0a99ad6.png)
+![six path symbol svg nft](https://github.com/elducati/six-path-nft/blob/master/packages/react-app/public/sixpath.svg)
 
 > Demonstration showing how SVG NFTs can be composed on top of each other. 
 > Borrowed concept from:
